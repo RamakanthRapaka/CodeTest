@@ -69,7 +69,7 @@
 
             <div class="mb-3">
               <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-              <input type="text" class="form-control" id="address2" name="address2" placeholder="Apartment or suite">
+              <input type="text" class="form-control" id="addresss" name="addresss" placeholder="Apartment or suite">
             </div>
 
             <div class="row">
