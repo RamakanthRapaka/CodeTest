@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2020 at 10:16 AM
+-- Generation Time: May 20, 2020 at 12:32 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.30
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `codetest`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enquiry`
+--
+
+CREATE TABLE `enquiry` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `address` longtext DEFAULT NULL,
+  `message` longtext DEFAULT NULL,
+  `enquired_at` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `enquiry`
+--
+
+INSERT INTO `enquiry` (`id`, `name`, `email`, `address`, `message`, `enquired_at`) VALUES
+(1, 'Ramakanth Rapaka', 'ramakanth.rapaka1@gmail.com', 'Plot No 7 Adithya Nagar Fathulla Guda,BandlaGuda, Nagole Hyderabad Nagole Hyderabad United States California 500068', 'Message', '2020-05-20 16:01:59');
 
 -- --------------------------------------------------------
 
@@ -72,6 +94,12 @@ INSERT INTO `timings` (`id`, `days`, `opening_hours`) VALUES
 --
 
 --
+-- Indexes for table `enquiry`
+--
+ALTER TABLE `enquiry`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `product`
 --
 ALTER TABLE `product`
@@ -86,6 +114,12 @@ ALTER TABLE `timings`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `enquiry`
+--
+ALTER TABLE `enquiry`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `product`
