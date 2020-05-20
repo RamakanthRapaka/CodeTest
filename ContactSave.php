@@ -19,5 +19,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	mysqli_query($db,"INSERT INTO enquiry (`name`, `email`, `address`, `message`)
 VALUES ('$name', '$email', '$address', '$message')")
 or die(mysqli_error($db));
+
+$msg = $message;
+
+$msg = wordwrap($msg,70);
+
+mail("rams_547@yahoo.co.in","New Enquiry",$msg);
 }
 ?>
